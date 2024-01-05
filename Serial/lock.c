@@ -34,6 +34,13 @@
 #include <errno.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+/**
+ * Fix bug in ROS Noetic @ ubuntu 20.04:
+ * undefined reference to "minor" and "major"
+*/
+#include <sys/sysmacros.h>
+// By akawa @ 2024.1
+
 #include <fcntl.h>
 #include <string.h>
 #include <limits.h>
